@@ -1,0 +1,32 @@
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+
+Import-Module ServerManager
+Add-WindowsFeature Web-Server
+Add-WindowsFeature Web-Static-Content
+Add-WindowsFeature NET-Framework-45-Core
+Add-WindowsFeature NET-WCF-HTTP-Activation45
+Add-WindowsFeature Web-Asp-Net
+Add-WindowsFeature Web-Asp-Net45
+Add-WindowsFeature Web-Net-Ext
+Add-WindowsFeature Web-ISAPI-Ext
+Add-WindowsFeature Web-ISAPI-Filter
+Add-WindowsFeature Web-Mgmt-Tools
+
+#cinst Dogtail.DotNet3.5SP1
+#cinst DotNet4.5.1
+cinst aspnetmvc4.install
+cinst MsSqlServer2012ExpressAdv
+cinst javaruntime
+
+cinst dotPeek
+cinst TelnetClient -source windowsFeatures
+cinst NugetPackageExplorer
+cinst NugetPackageManager
+cinst GoogleChrome
+cinst Firefox
+cinst msysgit
+cinst fiddler
+cinst SourceTree
+cinst notepadplusplus
+
+Disable-InternetExplorerESC
